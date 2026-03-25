@@ -7,6 +7,7 @@ Enter Your Code Here
 '''
 def get_disk_usage():
 #Get disk stats from main drive
+#os.statvfs will help give the details of the drive
     stats = os.statvfs('/')
 
 # calculate total, used and free space
