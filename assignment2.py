@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import os
 
 '''
 Enter Your Code Here
@@ -18,9 +19,15 @@ def get_disk_usage():
 # calculate percentage
     percent = (used / total) * 100
 
+    return total, used, free, percent
+
 def display_disk():
 #Get information from get_disk_usage
-    
+    total, used, free, percent = get_disk_usage()
 
 #print the results, converting bytes to GB
     print("hardrive usage")
+    print(f"total: {total / (1024 ** 3):.2f} GB")
+    print(f"total: {used / (1024 ** 3):.2f} GB")
+    print(f"free: {free / (1024 ** 3):.2f} GB")
+    print(f"percentage used: {percent:.1f} %")
