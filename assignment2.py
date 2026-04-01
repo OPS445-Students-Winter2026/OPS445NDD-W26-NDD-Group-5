@@ -11,12 +11,16 @@ def get_disk_usage():
     stats = os.statvfs('/')
 
 # calculate total, used and free space
+    total = stats.f_frsize * stats.f_blocks
+    free = stats.f_frsize * stats.f_bfree
+    used = total - free
 
 # calculate percentage
     percent = (used / total) * 100
 
 def display_disk():
 #Get information from get_disk_usage
+    
 
 #print the results, converting bytes to GB
     print("hardrive usage")
