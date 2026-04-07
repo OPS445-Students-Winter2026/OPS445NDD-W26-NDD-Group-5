@@ -1,4 +1,4 @@
-from assignment2 import RAM
+from assignment2 import get_ram_usage, display_ram_usage
 
 
-print(RAM.get_ram_usage(G))
+display_ram_usage()
