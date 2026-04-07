@@ -34,7 +34,7 @@ def display_disk():
 
 if __name__ == '__main__':
 #creating the phraser
-    parser = argparse.ArgumentParser(description = "Harddrive monitor")
+    parser = argparse.ArgumentParser()
 #added the flag --disk 
     parser.add_argument('--disk', action='store_true')
 
